@@ -1,0 +1,12 @@
+### List shopping items
+GET http://localhost:8080/shopping-items
+
+### Create new shopping items
+POST http://localhost:8080/shopping-items
+
+{
+    "name": "Pasta"
+}
+
+### Remove shopping item
+DELETE http://localhost:8080/shopping-items/81e6db8e-9a6c-4a12-a33d-30013cff83e7
