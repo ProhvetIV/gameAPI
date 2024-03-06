@@ -1,18 +1,11 @@
 package main
 
 import (
-	"fmt"
-	"gameAPI/handlers"
+	"gameAPI/api"
 	"net/http"
 )
 
 func main() {
-	port := ":8000"
-
-	mux := http.NewServeMux()
-
-	mux.HandleFunc("/receive", handlers.HandleGet)
-
-	fmt.Printf("Server running on port: %s\n", port)
-	http.ListenAndServe(port, mux)
+	srv := api.NewServer()
+	http.ListenAndServe(":8080", srv)
 }
